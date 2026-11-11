@@ -1,4 +1,4 @@
-# JornadaTCG Web
+# HIKARI IMPORTADOS — Web
 
 Frontend separado do backend. React + TypeScript + Vite, Node.js 24.
 
@@ -665,3 +665,16 @@ Não use o preview do Vite como servidor de produção. Prefira uma origem HTTPS
 única para site e API, ou subdomínios do mesmo domínio, para preservar o cookie
 SameSite=Strict. A API deve permitir a origem exata em AUTH_ALLOWED_ORIGINS.
 O guia completo está em docs/deployment.md no repositório jornadatcg-api.
+
+
+## Identidade da loja
+
+Nome público: HIKARI IMPORTADOS. Domínio: hikariimportados.com, registrado na Hostinger.
+A logo foi extraída do PDF fornecido pelo cliente para `public/brand/hikari-logo.svg`,
+com caminhos vetoriais e fundo transparente. Cabeçalho, rodapé e banner inicial
+usam a mesma arte, exibida em branco por CSS sobre fundos escuros. A versão preta
+original permanece no SVG. `public/brand/hikari-icon.svg` usa somente o símbolo
+do sol da arte original no ícone da aba, com contraste para tema escuro.
+Os nomes técnicos dos repositórios, headers, sessões e chaves de armazenamento
+continuam compatíveis com as versões existentes. O novo domínio ainda precisa
+ser autenticado na Brevo e configurado na hospedagem antes de ser usado em produção.

@@ -442,7 +442,7 @@ export function ShopProvider({
               : panel === "reset-password"
                 ? "Defina uma nova senha"
                 : panel === "login"
-                  ? "Entre na sua jornada"
+                  ? "Entre na sua conta"
                   : panel === "register"
                     ? "Crie sua conta"
                     : panel === "cart"
@@ -577,7 +577,7 @@ export function ShopProvider({
                 </p>
               )}
               <p className="muted">
-                Use sua conta JornadaTCG para guardar suas cartas no carrinho.
+                Use sua conta HIKARI IMPORTADOS para guardar suas cartas no carrinho.
               </p>
               <label>
                 E-mail

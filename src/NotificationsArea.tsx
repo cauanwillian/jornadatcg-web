@@ -60,7 +60,7 @@ export function NotificationsArea({
       aria-label="Notificações da sua conta"
     >
       <div className="notification-toolbar">
-        <h3>Atualizações da sua jornada</h3>
+        <h3>Atualizações da sua conta</h3>
         <button
           className="outline"
           disabled={state.opening || state.denied}

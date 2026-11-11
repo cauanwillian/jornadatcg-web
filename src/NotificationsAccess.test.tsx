@@ -143,7 +143,7 @@ describe("Notifications navigation", () => {
     );
     fireEvent.click(screen.getByRole("button", { name: "Notificações" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(
       screen.getByText("Entre para acompanhar seus pedidos e envios."),

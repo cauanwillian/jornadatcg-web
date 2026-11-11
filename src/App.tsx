@@ -39,7 +39,7 @@ function CardImage({
     />
   ) : (
     <div className="card-placeholder">
-      <span>J</span>
+      <span aria-hidden="true">H</span>
       <small>Imagem indisponível</small>
     </div>
   );
@@ -307,11 +307,14 @@ export default function App() {
       <div className="top-note">Sua próxima carta favorita está aqui.</div>
       <header>
         <div className="header-inner">
-          <a className="brand" href="/" aria-label="Jornada TCG início">
-            <span className="brand-mark">J</span>
-            <span>
-              JORNADA<small>TRADING CARD GAME</small>
-            </span>
+          <a className="brand" href="/" aria-label="HIKARI IMPORTADOS início">
+            <img
+              className="brand-logo"
+              src="/brand/hikari-logo.svg"
+              alt="HIKARI IMPORTADOS"
+              width="630"
+              height="474"
+            />
           </a>
           <form
             className="search"
@@ -359,7 +362,7 @@ export default function App() {
           ) : (
             <div className="hero-fallback">
               <div>
-                <p className="eyebrow">BEM-VINDO À JORNADA</p>
+                <p className="eyebrow">BEM-VINDO À HIKARI</p>
                 <h1>
                   Cada carta,
                   <br />
@@ -370,9 +373,14 @@ export default function App() {
                   Explore o catálogo ↗
                 </a>
               </div>
-              <div className="hero-symbol" aria-hidden="true">
-                J<span>TCG</span>
-              </div>
+              <img
+                className="hero-logo"
+                src="/brand/hikari-logo.svg"
+                alt=""
+                aria-hidden="true"
+                width="630"
+                height="474"
+              />
             </div>
           )}
         </section>
@@ -559,10 +567,17 @@ export default function App() {
         </section>
       </main>
       <footer>
-        <a className="brand" href="/">
-          JORNADA TCG
+        <a className="brand" href="/" aria-label="HIKARI IMPORTADOS início">
+          <img
+            className="brand-logo"
+            src="/brand/hikari-logo.svg"
+            alt="HIKARI IMPORTADOS"
+            width="630"
+            height="474"
+            loading="lazy"
+          />
         </a>
-        <p>Sua coleção. Seu tempo. Sua jornada.</p>
+        <p>Sua coleção. Seu tempo.</p>
         <small>
           Compre suas cartas, acumule pedidos e solicite o envio quando quiser.
         </small>

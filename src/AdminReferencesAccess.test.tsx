@@ -134,7 +134,7 @@ describe("Reference management access", () => {
     );
     fireEvent.click(screen.getByRole("button", { name: "Entrar" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(
       screen.queryByRole("button", { name: "Cadastros da loja" }),
@@ -207,7 +207,7 @@ describe("Reference management access", () => {
     fireEvent.click(screen.getByRole("button", { name: "Iniciar cadastro" }));
     act(() => notify(null));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(screen.queryByLabelText("Cadastros simulados")).toBeNull();
     expect(old.props.isCurrentSession()).toBe(false);

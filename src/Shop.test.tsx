@@ -118,7 +118,7 @@ describe("Login and cart UI", () => {
     renderShop();
     await openRegistration();
     fireEvent.submit(screen.getByLabelText("Senha").closest("form")!);
-    await screen.findByRole("dialog", { name: "Entre na sua jornada" });
+    await screen.findByRole("dialog", { name: "Entre na sua conta" });
     expect(screen.getByRole("status").textContent).toContain("Conta criada!");
     expect((screen.getByLabelText("E-mail") as HTMLInputElement).value).toBe(
       registered.email,
@@ -160,7 +160,7 @@ describe("Login and cart UI", () => {
     fireEvent.click(screen.getByRole("button", { name: /Carrinho/ }));
     expect(screen.getByRole("dialog", { name: "Crie sua conta" })).toBeTruthy();
     await act(async () => creation.resolve(registered));
-    await screen.findByRole("dialog", { name: "Entre na sua jornada" });
+    await screen.findByRole("dialog", { name: "Entre na sua conta" });
     expect(
       (screen.getByRole("button", { name: "Fechar" }) as HTMLButtonElement)
         .disabled,
@@ -210,7 +210,7 @@ describe("Login and cart UI", () => {
       </ShopProvider>,
     );
     fireEvent.click(screen.getByText("+ carrinho"));
-    expect(screen.getByText("Entre na sua jornada")).toBeTruthy();
+    expect(screen.getByText("Entre na sua conta")).toBeTruthy();
     fireEvent.change(screen.getByLabelText("E-mail"), {
       target: { value: "test@example.com" },
     });

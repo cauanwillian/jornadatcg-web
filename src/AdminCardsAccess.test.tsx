@@ -145,7 +145,7 @@ describe("Card library administrative access", () => {
     );
     fireEvent.click(screen.getByRole("button", { name: "Entrar" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(
       screen.queryByRole("button", { name: "Biblioteca de cartas" }),
@@ -237,7 +237,7 @@ describe("Card library administrative access", () => {
     fireEvent.click(screen.getByRole("button", { name: "Iniciar importação" }));
     act(() => notify(null));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(screen.queryByLabelText("Biblioteca simulada")).toBeNull();
     expect(old.props.isCurrentSession()).toBe(false);
@@ -247,7 +247,7 @@ describe("Card library administrative access", () => {
     });
     expect(closeButton().disabled).toBe(false);
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
   });
   it("replaces private search state when another administrator signs in", async () => {
@@ -307,7 +307,7 @@ describe("Card library administrative access", () => {
       old.props.onOpenProducts();
     });
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(closeButton().disabled).toBe(false);
   });

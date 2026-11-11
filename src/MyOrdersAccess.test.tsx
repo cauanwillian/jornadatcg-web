@@ -174,7 +174,7 @@ describe("My orders account access", () => {
     mount();
     fireEvent.click(screen.getByRole("button", { name: "Entrar" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(screen.queryByRole("button", { name: "Meus pedidos" })).toBeNull();
     expect(screen.queryByLabelText("Pedidos simulados")).toBeNull();
@@ -246,7 +246,7 @@ describe("My orders account access", () => {
       begin();
       act(() => notify(null));
       expect(
-        screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+        screen.getByRole("dialog", { name: "Entre na sua conta" }),
       ).toBeTruthy();
       expect(old.props.isCurrentSession()).toBe(false);
       expect(panels.removed).toContain(old.instance);

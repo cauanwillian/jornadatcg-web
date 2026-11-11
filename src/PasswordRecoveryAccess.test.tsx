@@ -124,7 +124,7 @@ describe("Password recovery navigation and ownership", () => {
     expect(session.authorized).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole("button", { name: "Voltar para entrar" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(screen.getByLabelText<HTMLInputElement>("Senha").value).toBe("");
     expect(screen.getByLabelText<HTMLInputElement>("E-mail").value).toBe(
@@ -175,7 +175,7 @@ describe("Password recovery navigation and ownership", () => {
         screen.getByRole("dialog").getAttribute("aria-labelledby"),
       ).toBeTruthy();
       expect(
-        screen.queryByRole("dialog", { name: "Entre na sua jornada" }),
+        screen.queryByRole("dialog", { name: "Entre na sua conta" }),
       ).toBeNull();
       fireEvent.click(
         screen.getByRole("button", { name: "Concluir operação" }),
@@ -192,7 +192,7 @@ describe("Password recovery navigation and ownership", () => {
     expect(session.invalidateSession).toHaveBeenCalledTimes(1);
     expect(session.logout).not.toHaveBeenCalled();
     expect(session.login).not.toHaveBeenCalled();
-    const login = screen.getByRole("dialog", { name: "Entre na sua jornada" });
+    const login = screen.getByRole("dialog", { name: "Entre na sua conta" });
     expect(within(login).getByRole("status").textContent).toBe(
       "Senha redefinida. Entre novamente com sua nova senha.",
     );
@@ -203,7 +203,7 @@ describe("Password recovery navigation and ownership", () => {
     view({ present: true, token: null });
     fireEvent.click(screen.getByRole("button", { name: "Voltar para entrar" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(session.invalidateSession).not.toHaveBeenCalled();
     expect(session.logout).not.toHaveBeenCalled();

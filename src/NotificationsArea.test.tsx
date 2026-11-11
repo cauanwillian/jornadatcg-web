@@ -79,7 +79,7 @@ describe("NotificationsArea", () => {
       }),
     );
     expect(
-      screen.getByRole("heading", { name: "Atualizações da sua jornada" })
+      screen.getByRole("heading", { name: "Atualizações da sua conta" })
         .tagName,
     ).toBe("H3");
     expect(screen.getByText(/são um histórico/)).toBeTruthy();

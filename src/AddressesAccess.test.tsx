@@ -135,7 +135,7 @@ describe("Address book access", () => {
     );
     fireEvent.click(screen.getByRole("button", { name: "Entrar" }));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(screen.queryByRole("button", { name: "Meus endereços" })).toBeNull();
     expect(screen.queryByLabelText("Endereços simulados")).toBeNull();
@@ -183,7 +183,7 @@ describe("Address book access", () => {
     fireEvent.click(screen.getByRole("button", { name: "Iniciar endereço" }));
     act(() => notify(null));
     expect(
-      screen.getByRole("dialog", { name: "Entre na sua jornada" }),
+      screen.getByRole("dialog", { name: "Entre na sua conta" }),
     ).toBeTruthy();
     expect(screen.queryByLabelText("Endereços simulados")).toBeNull();
     expect(panels.removed).toContain(first.instance);
